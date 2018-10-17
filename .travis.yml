@@ -1,0 +1,19 @@
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "rightnow-ministries"
+    token:
+      secure: "TBD"
+
+jdk:
+  - oraclejdk8
+
+script:
+  - sonar-scanner
+
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
+
